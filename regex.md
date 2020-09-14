@@ -130,7 +130,7 @@ Example :
 let reg = /[a-z0-9]/; // searches for all letters and numbers
 ```
 
-10- To exclude certain characters, we use the caret character ( `^` ).
+10- To exclude certain characters, we use the caret character ( `^` ) ( *inside an array* ).
 
 Example :
 
@@ -181,7 +181,80 @@ sent.match(reg2); // returns ['ti']
 ```
 
 >### Note :
->The two regexes search  for a string with "t" at the beginning, "i" at the end and letters between them
+>The two regexes search  for a string with "t" at the beginning, "i" at the end and letters between them.
 
+14- The caret character ( `^` ) ( *inside an array* ) to specify a certain beginning of a string.
+
+Example :
+
+```javascript
+let name = "Mohamed Ali";
+let reg1 = /^Mohamed/;
+let reg2 = /^Ali/;
+reg1.test(name); // returns true
+reg2.test(name); // returns false
+```
+
+15-  The dollar sign character ( `$` ) to specify a certain ending of a string.
+
+Example :
+
+```javascript
+let name = "Mohamed Ali";
+let reg1 = /Ali$/;
+let reg2 = /Mohamed$/;
+reg1.test(name); // returns true
+reg2.test(name); // returns false
+```
+
+16- The question mark character ( `?` ) is also used to make a character before it optional ( can exist or not ).
+
+Example :
+
+```javascript
+let american = "color";
+let british = "colour";
+let reg= /colou?r/;
+reg.test(american); // Returns true
+reg.test(british); // Returns true
+```
+
+## Some popular shortcuts used in regexes :
+
+1- ( `\w` ) is equal to [A-Za-z0-9_].
+
+Example :
+
+```javascript
+let sent = "some_random_text1234";
+let reg = /\w+/;
+reg.test(sent); // Returns true
+```
+
+> Its opposite ( `\W` ) which is equal to [^A-Za-z0-9_].
+
+```javascript
+let sent = "some_random_text1234#";
+let reg = /\W/;
+sent.match(reg); // Returns ['#']
+```
+
+2- ( `\d` ) is equal to [0-9].
+
+> Its opposite ( `\D` ) which is equal to [^0-9].
+
+3- ( `\s` ) is equal to [ \r\t\f\n\v] ( All white spaces ).
+
+> Its opposite ( `\S` ) which is equal to [^ \r\t\f\n\v].
+
+4- Quantity specifiers ( `{}` ) which specify how many times a character is repeated.
+
+Example :
+
+```javascript
+let reg1 = /a{3,5}/; // 'a' is repeated from 3 to 5 times
+let reg1 = /a{3,}/; // 'a' is repeated at least 3 times
+let reg1 = /a{3}/; // 'a' is repeated 3 times
+```
 
 Thanks for staying till the end 💖.
