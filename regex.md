@@ -253,8 +253,8 @@ Example :
 
 ```javascript
 let reg1 = /a{3,5}/; // 'a' is repeated from 3 to 5 times
-let reg1 = /a{3,}/; // 'a' is repeated at least 3 times
-let reg1 = /a{3}/; // 'a' is repeated 3 times
+let reg2 = /a{3,}/; // 'a' is repeated at least 3 times
+let reg3 = /a{3}/; // 'a' is repeated 3 times
 ```
 
 Thanks for staying till the end 💖.
