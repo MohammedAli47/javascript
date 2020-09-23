@@ -1,9 +1,5 @@
-const person = {
-    name: "Alex",
-    age: 27,
-    sayName: function() {
-        console.log("Alex");
-    }
+function add(x, y) {
+    console.log( x + y );
 }
+setInterval(add(3, 4), 3000)
 
-person.sayName();
