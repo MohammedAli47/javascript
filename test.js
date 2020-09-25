@@ -1,5 +1,3 @@
-function add(x, y) {
-    console.log( x + y );
-}
-setInterval(add(3, 4), 3000)
+let x1 = [1, 2, 3];
 
+console.log(x1.toString());
